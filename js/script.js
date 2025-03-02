@@ -10,6 +10,8 @@ console.log(userDistanceInput);
 const userAgeInput = document.getElementById("age");
 console.log(userAgeInput);
 
+const resultElement = document.getElementById("result");
+console.log(resultElement);
 
 
 
@@ -24,4 +26,14 @@ function handleUserForm(event) {
     const userage = userAgeInput.value;
     const allData = `${username} ${userdistance} ${userage}`;
     console.log(allData);
+    const price = userdistance * 0.21;
+    let finalPrice = price;
+    if (userage < 18) {
+    finalPrice = price - (price * 20 / 100);
+    } else if (userage > 65) {
+    finalPrice = price - (price * 40 / 100);
+    }
+    console.log(finalPrice.toFixed(2));
+    
 };
+

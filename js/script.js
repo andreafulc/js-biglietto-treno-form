@@ -1,3 +1,5 @@
+//acquisisco tutti gli elementi che mi servono
+
 const userForm = document.getElementById("ticketForm");
 console.log(userForm);
 
@@ -14,7 +16,7 @@ const resultElement = document.getElementById("result");
 console.log(resultElement);
 
 
-
+//genero una funzione con tutto quello che mi serve
 
 userForm.addEventListener("submit", handleUserForm);
 
@@ -33,7 +35,15 @@ function handleUserForm(event) {
     } else if (userage > 65) {
     finalPrice = price - (price * 40 / 100);
     }
-    console.log(finalPrice.toFixed(2));
-    
+
+    //Invio la risposta sul terminale e in pagina
+
+    let travelCost = finalPrice.toFixed(2)
+
+    console.log(travelCost);
+
+    resultElement.innerHTML = `Ciao <i>${username}</i>, il viaggio costa € <strong>${travelCost}</strong>. Ti auguriamo di invecchiare sui nostri treni`;
+
+        
 };
 

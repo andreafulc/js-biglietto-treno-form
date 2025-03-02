@@ -1,4 +1,4 @@
-//acquisisco tutti gli elementi che mi servono
+//Take all the element I need
 
 const userForm = document.getElementById("ticketForm");
 console.log(userForm);
@@ -16,7 +16,7 @@ const resultElement = document.getElementById("result");
 console.log(resultElement);
 
 
-//genero una funzione con tutto quello che mi serve
+//make a function 
 
 userForm.addEventListener("submit", handleUserForm);
 
@@ -36,7 +36,7 @@ function handleUserForm(event) {
     finalPrice = price - (price * 40 / 100);
     }
 
-    //Invio la risposta sul terminale e in pagina
+    //print the price in console and page
 
     let travelCost = finalPrice.toFixed(2)
 

@@ -44,6 +44,7 @@ function handleUserForm(event) {
 
     resultElement.innerHTML = `Ciao <i>${username}</i>, il viaggio costa € <strong>${travelCost}</strong>. Ti auguriamo di invecchiare sui nostri treni`;
 
-        
+    //clean the input
+    userForm.reset();
 };
 
